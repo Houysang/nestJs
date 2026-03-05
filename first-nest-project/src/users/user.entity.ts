@@ -19,10 +19,4 @@ export class User {
   tasks: Task[];
 }
 
-@Module({
-  imports: [TypeOrmModule.forFeature([User])],
-  providers: [UsersService],
-  controllers: [UsersController],
-  exports: [TypeOrmModule],
-})
-export class UserModule {}
+export { Task };

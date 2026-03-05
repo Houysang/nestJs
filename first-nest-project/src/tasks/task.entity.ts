@@ -22,9 +22,4 @@ export class Task {
   user: User;
 }
 
-@Module({
-  imports: [TypeOrmModule.forFeature([Task]), UsersModule],
-  providers: [TasksService],
-  controllers: [TasksController],
-})
-export class TaskModule {}
+export { User };
