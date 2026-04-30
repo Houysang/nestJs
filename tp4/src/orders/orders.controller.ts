@@ -3,8 +3,7 @@ import { OrdersService } from './orders.service';
 
 @Controller('orders') 
 export class OrdersController {
-  private orders: any[] = [];
-
+  private orders: any[] = []; 
   constructor(private readonly ordersService: OrdersService) {} 
 
   @Get()
@@ -19,4 +18,4 @@ export class OrdersController {
     this.orders.push(createOrderDto); 
     return this.ordersService.createOrder(createOrderDto);
   }
-}
+} 

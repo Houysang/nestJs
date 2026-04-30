@@ -3,7 +3,6 @@ import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { LoggingInterceptor } from './common/interceptors/logging.interceptor';
 import { config } from 'dotenv';
-
 config();
 
 async function bootstrap() {
@@ -17,9 +16,10 @@ async function bootstrap() {
       transform: true,
     }),
   );
-
   app.useGlobalInterceptors(new LoggingInterceptor());
-
   await app.listen(process.env.PORT ?? 3100);
+
+  
 }
+
 bootstrap();
